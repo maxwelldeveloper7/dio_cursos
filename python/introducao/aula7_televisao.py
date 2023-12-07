@@ -17,18 +17,18 @@ class Televisao:
         if self.ligada:
             self.canal -= 1
 
-
-tv = Televisao()
-print('Televisão está ligada? {}'.format(tv.ligada))
-tv.power()
-print('Televisão está ligada? {}'.format(tv.ligada))
-tv.power()
-print('Televisão está ligada? {}'.format(tv.ligada))
-print('Canal: {}'.format(tv.canal))
-tv.power()
-print('Televisão está ligada? {}'.format(tv.ligada))
-tv.aumenta_canal()
-tv.aumenta_canal()
-print('Canal: {}'.format(tv.canal))
-tv.diminui_canal()
-print('Canal: {}'.format(tv.canal))
+if __name__ == '__main__':
+    tv = Televisao()
+    print('Televisão está ligada? {}'.format(tv.ligada))
+    tv.power()
+    print('Televisão está ligada? {}'.format(tv.ligada))
+    tv.power()
+    print('Televisão está ligada? {}'.format(tv.ligada))
+    print('Canal: {}'.format(tv.canal))
+    tv.power()
+    print('Televisão está ligada? {}'.format(tv.ligada))
+    tv.aumenta_canal()
+    tv.aumenta_canal()
+    print('Canal: {}'.format(tv.canal))
+    tv.diminui_canal()
+    print('Canal: {}'.format(tv.canal))
