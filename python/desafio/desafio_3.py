@@ -1,25 +1,23 @@
 n = int(input())
 
-encaixa = True
 
-while(n > 0):
-    a = 0
-    while a < 1:
-        a = int(input())
-    b = 0
-    while b < 1:
-        b = int(input())
-    
-    
-    a = str(a)
-    b = str(b)
-        
-    a_maior_igual_b = len(a) >= len(b)
-    
-    encaixa = a_maior_igual_b and a[-len(b):] == b
-    
-    if encaixa:        
-        print('encaixa')    
+while n > 0:
+
+
+    values = input().split()
+
+
+    aux = ''
+    for digit in values[0][::-1]:
+        aux += digit
+        if aux == values[1][::-1]:
+            print('encaixa')
+            break
     else:
         print('nao encaixa')
+
+
+    aux = ''
+
+
     n -= 1
