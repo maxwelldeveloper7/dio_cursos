@@ -64,6 +64,7 @@ while True:
             print(f'Saldo atual:        R$ {saldo:5.2f}')
         print(''.center(48,'-'))
         print(f'Limite disponível para saques diários: R$ {limite:5.2f}')
+        print('Limite de saques diários: 3')
         print(f'Saques realizados: {numero_saques}')
     elif opcao == '0':
         print('Fim do programa')
