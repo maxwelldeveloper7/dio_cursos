@@ -9,7 +9,7 @@ if a == 'vertebrado':
         elif c == 'onivoro':
             print('pomba')
     elif b == 'mamifero':
-        if c == 'oniviro':
+        if c == 'onivoro':
             print('homem')
         elif c == 'herbivoro':
             print('vaca')
