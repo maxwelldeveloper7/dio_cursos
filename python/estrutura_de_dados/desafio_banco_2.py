@@ -25,23 +25,47 @@ def depositar(saldo, valor, extrato, /):
 
 
 def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
-    excedeu_saldo = valor > saldo
-    excedeu_limite = valor > limite
-    excedeu_saques = numero_saques >= limite_saques
+    if numero_saques == LIMITE_SAQUES:
+        print('Você já efetuou 3 saques diários permitidos! Tente novamente amanhã!')
+        return
+
+    if limite == 0:
+        print('Você alcançou o limite de saque diários de R$ 500,00! Tente novamente amanhã!')
+        return
+
     
-    if excedeu_saldo:
-        print('\nFalha na operação! Saldo insuficiente.')
-    elif excedeu_limite:
-        print('\nFalha na operação! O valor do saque excede o limite diário.')
-    elif excedeu_saques:
-        print('\nFalha na operação! Número máximo de saques excedido.')
-    elif valor > 0:
-        saldo -= valor
-        extrato += f'Saque:\t\tR$ {valor:.2f}\n'
-        numero_saques += 1
-        print(f"Saque de R$ {valor:.2f} realizado com sucesso!")
+    if valor <= 0:
+        print('Valores menores iguais a zero não são permitidos, tente novamente!')
+    elif limite - valor < 0:
+        print('Limite de saques diários excedido! Tente novamente amanhã!')
+        print(f'Limite de saque atual: R$ {limite:.2f}')
+    elif valor > saldo:
+        print('Saldo indisponível')
+        print(f'Saldo atual: R$ {saldo:.2f}')
     else:
-        print('\n Falha na operação! O valor informado é inválido.')
+        saldo -= valor
+        extrato += f'Saque realizado:    R$ {valor:5.2f}\n'
+        print('Saque realizado com sucesso!')
+        print(f'Valor: R$ {valor:.2f}')
+        limite -= valor
+        numero_saques += 1 
+    # excedeu_saldo = valor > saldo
+    # excedeu_limite = valor > limite
+    # excedeu_saques = numero_saques >= limite_saques
+    
+    # if excedeu_saldo:
+    #     print('\nFalha na operação! Saldo insuficiente.')
+    # elif excedeu_limite:
+    #     print('\nFalha na operação! O valor do saque excede o limite diário.')
+    # elif excedeu_saques:
+    #     print('\nFalha na operação! Número máximo de saques excedido.')
+    # elif valor > 0:
+    #     saldo -= valor
+    #     extrato += f'Saque:\t\tR$ {valor:.2f}\n'
+    #     numero_saques += 1
+    #     print(f"Saque de R$ {valor:.2f} realizado com sucesso!")
+    # else:
+    #     print('\n Falha na operação! O valor informado é inválido.')
     return saldo, extrato
 
 
@@ -86,6 +110,7 @@ def criar_conta(agencia, numero_conta, usuarios):
             'numero_conta': numero_conta,
             'usuario': usuario
         }
+
     print('\nUsuário não encontrado, processo de abertura de conta encerrado!')
 
 
@@ -112,7 +137,7 @@ contas = []
 
 while True:
     opcao = menu()
-    
+
     if opcao == '1':
         valor = float(input('Informe o valor do depósito: '))
         saldo, extrato = depositar(saldo, valor, extrato)
@@ -126,12 +151,13 @@ while True:
             numero_saques=numero_saques,
             limite_saques=LIMITE_SAQUES
         )
+
     elif opcao == '3':
         exibir_extrato(saldo, extrato=extrato)
     elif opcao == '4':
         numero_conta = len(contas) + 1
         conta = criar_conta(AGENCIA, numero_conta, usuarios)
-        
+
         if conta:
             contas.append(conta)
     elif opcao == '5':
