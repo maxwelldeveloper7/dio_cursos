@@ -14,7 +14,7 @@ function App() {
   const[chatlog, setChatlog] = useState([{user:"gpt", message:"Como posso te ajudar hoje?"}]);
 
   async function handleSubmit(e){
-      e.preventDefautl()
+      e.preventDefault()
       let response = await makeRequest({prompt: input})
       response = response.data.split('\n').map(line => <p>{line}</p>);
       setChatlog([...chatlog,{user:'me', message: `${input}`},{user:'gpt',message: response}]);
