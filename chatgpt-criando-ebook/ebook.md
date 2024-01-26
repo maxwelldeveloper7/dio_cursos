@@ -1,4 +1,4 @@
-# A Força do CSS - Mestre em Treinamento
+# A Força do CSS - Domine o Poder dos Seletores
 
 ## Ilustração da capa gerada pela AI gencraft e Capa editada no Canva
 
@@ -7,6 +7,6 @@
 
 <img src="./a_jedi_in_medit_7658415f-b733-4809-98e9-1e9bd36bd6cf-removebg-preview.png" width="200px"/>
 </div>
-<img src="./A Força do CSS - Mestre CSS em Treinamento.jpg" width="400px"/>
+<img src="./A Força do CSS - Domine o Poder dos Seletores.jpg" width="400px"/>
 
 
