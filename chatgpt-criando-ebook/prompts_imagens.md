@@ -1,4 +1,4 @@
-# Gerado por <a>https://gencraft.com</a>
+# Gerado por <a href="https://gencraft.com" target="_blank">Gencraft</a>
 <div style="display: flex;">
 <img src="./assets/a jedi in medit 7658415f-b733-4809-98e9-1e9bd36bd6cf.png" width="400px"/>
 <img src="./assets/a_jedi_in_medit_7658415f-b733-4809-98e9-1e9bd36bd6cf-removebg-preview.png" width="400px"/>
@@ -7,11 +7,11 @@
 ```prompt
 a jedi in meditation pose, with your blue lightsaber floating on a dark background illuminated by his saber
 ```
-<p>Background removido por <a href="https://www.remove.bg/pt-br" target="blank">removebg</a></p>
+<p>Background removido por <a href="https://www.remove.bg/pt-br" target="_blank">removebg</a></p>
 <br>
 <br>
 
-# Gerado por <a href="https://www.promeai.com/?vsource=i_b2dqwh4n47" target="blank">Promeai</a>
+# Gerado por <a href="https://www.promeai.com/?vsource=i_b2dqwh4n47" target="_blank">Promeai</a>
 
 <div style="display: flex; justify-content: center">
 <img src="./assets/mestre_sifi.png" width="400px"/>
