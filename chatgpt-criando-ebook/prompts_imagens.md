@@ -7,11 +7,11 @@
 ```prompt
 a jedi in meditation pose, with your blue lightsaber floating on a dark background illuminated by his saber
 ```
-<p>Background removido por <a>https://www.remove.bg/pt-br</a></p>
+<p>Background removido por <a href="https://www.remove.bg/pt-br" target="blank">removebg</a></p>
 <br>
 <br>
 
-# Gerado por <a href="https://www.promeai.com/?vsource=i_b2dqwh4n47">Promeai</a>
+# Gerado por <a href="https://www.promeai.com/?vsource=i_b2dqwh4n47" target="blank">Promeai</a>
 
 <div style="display: flex; justify-content: center">
 <img src="./assets/mestre_sifi.png" width="400px"/>
