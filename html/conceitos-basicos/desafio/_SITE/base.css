@@ -24,6 +24,9 @@ body {
     padding: 10px 20px 0px;
 }
 .header {
+    display: flex;
+    align-items: center;
+    color: #f1f1f1;
     background-color: rgb(5, 108, 108);
     min-height: 150px;
 }
@@ -33,6 +36,31 @@ body {
     padding: 20px;
 }
 .footer {
+    color: #f1f1f1;
     background-color: rgb(99, 56, 240);
     min-height: 150px;
+    padding: 0px 30px;
+}
+
+table{
+    -webkit-box-shadow: 12px 14px 6px 5px rgba(0,0,0,0.24);
+    box-shadow: 12px 14px 6px 5px rgba(0,0,0,0.24);
+    border: solid 1px grey;
+}
+table thead th{
+    background-color: black;
+    color: white;
+}
+
+table tfoot{
+    background-color: lightgray;
+}
+
+table tbody tr:nth-child(even) td{
+    background-color: #dddddd;
+}
+
+table tbody tr:hover td{
+    background-color: #c0cbcc;
+    cursor: pointer;
 }
