@@ -6,12 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Principal</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        kbd{
+            border: solid 1px black;
+        }
+        pre{
+            background-color: #f1f1f1;
+        }
+        pre > code{
+            color: #333;
+        }
+
+    </style>
 </head>
 <body>
 
     <div>   
         <div class="logo">
-            <img src="assets/images/logo.png" width="200"/>
+            <img src="./assets/images/111efc2ce580404b913abf201476091c.png" width="100" alt="logomarca da página"/>
         </div>
     </div>
 
@@ -26,19 +38,54 @@
         </div>
 
         <div class="main">
-            
+            <h1 id="flask">
+                <figure>
+                    <img src="./assets/images/250px-Flask_logo.svg.png" alt="Título com logomarca do Framework Flask">
+                    <figcaption hidden>logomarca com formato de um frasco artesanal feito com um chifre, monocromático preto com o nome do framework a direita e uma frase abaixo: web development, one drop at a time</figcaption>
+                </figure>
+            </h1>
+            <hr>
+            <p><strong>Flask</strong> é um pequeno framework web escrito em Python. É classificado como um microframework porque não requer ferramentas ou bibliotecas particulares, mantendo um núcleo simples, porém, extensível. Não possui camada de abstração de banco de dados, validação de formulário ou quaisquer outros componentes onde bibliotecas de terceiros preexistentes fornecem funções comuns. No entanto, o Flask oferece suporte a extensões que podem adicionar recursos do aplicativo como se fossem implementados no próprio Flask. Existem extensões para mapeadores objeto-relacional, validação de formulário, manipulação de upload, várias tecnologias de autenticação aberta e várias ferramentas comuns relacionadas ao framework.</p>
+            <p>Aplicações que utilizam o framework Flask incluem a própria página da comunidade de desenvolvedores, o Pinterest e o LinkedIn.</p><br>
+
+            <h2 id="componentes">Componentes</h2>
+            <hr>
+            <p>O microframework Flask é baseado nos projetos <em>Pocoo, Werkzeug e Jinja2.</em></p>
+            <h3>Werkzeug</h3>
+            <p>Werkzeug é uma biblioteca de utilitários para a linguagem de programação Python, em outras palavras, um kit de ferramentas para aplicativos Web Server Gateway Interface (WSGI), e é licenciada sob uma Licença BSD. Werkzeug pode realizar objetos de software para funções de solicitação, resposta e utilidade. Ele pode ser usado para construir um framework de software customizado em cima dele e suporta Python 2.7, 3.5 e posteriores.</p>
+            <h3>Jinja</h3>
+            <p>Jinja, também da Ronacher, é um mecanismo de template para a linguagem de programação Python e está licenciado sob uma Licença BSD. Semelhante ao framework web Django, ele lida com modelos em uma sandbox.</p>
+
+            <h2 id="exemplo">Exemplo</h2>
+            <hr>
+            <p>O código abaixo mostra uma aplicação web simples que imprime na tela do navegador "Olá mundo!":</p>
+            <pre>
+            <code>
+            from flask import Flask
+                app = Flask(__name__)
+
+                @app.route("/")
+                def hello():
+                    return "Olá mundo!"
+                if __name__ == "__main__":
+                    app.run()
+            </code>
+            </pre>
+
         </div>
 
         <div class="anchors">
             <h2>Neste Artigo</h2>
             <ul>
-                <li><a href="#">Âncoras</a></li>
+                <li><a href="#flask">Flask</a></li>
+                <li><a href="#componentes">Componentes</a></li>
+                <li><a href="#exemplo">Exemplo</a></li>
             </ul>
         </div>
     </div>
 
     <div class="footer">
-
+        Esta página foi editada pela última vez às 15h59min de 23 de fevereiro de 2024.
     </div>
 </body>
 </html>
