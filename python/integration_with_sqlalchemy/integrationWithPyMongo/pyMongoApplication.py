@@ -2,12 +2,12 @@ import  pymongo as pyM
 import datetime
 import pprint
 
-client = pyM.MongoClient("mongodb+srv://maxwellchaves1844:3wqjjSGespZC2QN6@cluster0.lwevttd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+client = pyM.MongoClient("mongodb+srv://pymongo:pymongo@cluster0.lwevttd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 db = client.test
 
 collection = db.test_collection
-print(db.test_collection)
+# print(db.test_collection)
 
 # definição de informação para compor o documento
 post = {
@@ -22,10 +22,10 @@ posts = db.posts
 post_id = posts.insert_one(post).inserted_id
 print(post_id)
 
-# print(db.posts.find_one())
+print(db.posts.find_one())
 pprint.pprint(db.posts.find_one())
 
-# bulk inserts
+#bulk inserts
 new_posts = [{
         "author": "Mike",
         "text": "Another post",
