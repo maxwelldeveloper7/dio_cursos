@@ -1,6 +1,6 @@
-'''
-main
-'''
+"""
+    Aplicação de exemplo
+"""
 
 def print_hi(name):
     """Imprime uma saudação"""
