@@ -54,13 +54,13 @@ print('Executando statement sql')
 sql_insert = text("insert into user values(1,'maxwell','email@email.com', 'max')")
 
 with engine.begin() as conn:
-        result = conn.execute(sql_insert)
+    result = conn.execute(sql_insert)
 
 sql = text('select * from user')
 result = None
 
 with engine.begin() as conn:
-        result = conn.execute(sql)
+    result = conn.execute(sql)
 
 for row in result:
     print(row)
