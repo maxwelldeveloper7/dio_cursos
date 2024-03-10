@@ -12,7 +12,7 @@ Bem-vindo ao repositório do Desafio SQLite e MongoDB com Python! Aqui estão as
 
 ## Sobre o Projeto
 
-Este repositório contém um desafio prático envolvendo a utilização do SQLite e MongoDB com Python. O desafio tem como objetivo aplicar os conhecimentos adquiridos no curso sobre frameworks em Python.
+Este repositório contém um desafio prático envolvendo a utilização do SQLite e MongoDB com Python. O desafio tem como objetivo aplicar os conhecimentos adquiridos no curso sobre os frameworks SQLAlchemy e PyMongo.
 
 ## Estrutura do Repositório
 
