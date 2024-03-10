@@ -11,12 +11,10 @@ from sqlalchemy import Column
 from sqlalchemy import Integer
 from sqlalchemy import String
 from sqlalchemy import DECIMAL
-from sqlalchemy import Float
 from sqlalchemy import ForeignKey
 from sqlalchemy import create_engine
 from sqlalchemy import inspect
 from sqlalchemy import select
-from sqlalchemy import func
 
 Base = declarative_base()
 
@@ -57,7 +55,7 @@ class Conta(Base):
             Retorna uma representação dos campos do da tabela de conta com a
             classe Conta.
         """
-        return f"Conta(id={self.id}, tipo={self.tipo}, agencia={self.agencia}, saldo={self.saldo})"
+        return f"Conta(id={self.id}, tipo={self.tipo}, agencia={self.agencia}, saldo={self.saldo}, id_cliente={self.cliente.id})"
 
 print("verificando nome das tabelas: ",
       Cliente.__tablename__,
@@ -103,7 +101,7 @@ with Session(engine) as session:
 
     conta2 = Conta(
         tipo='Conta Poupança',
-        agencia='002',
+        agencia='001',
         saldo=1000.00,
         cliente=cliente2
     )
@@ -116,11 +114,41 @@ with Session(engine) as session:
 
     conta3 = Conta(
         tipo='Conta Corrente',
-        agencia='003',
+        agencia='001',
         saldo=500.00,
         cliente=cliente3
     )
 
     #  Enviando para o DB
-    session.add_all([conta1])
+    session.add_all([conta1, conta2, conta3])
     session.commit()
+
+
+stmt = select(Cliente)
+print('\nRecuperando clientes')
+for cliente in session.scalars(stmt):
+    print(cliente)
+
+stmt_cliente = select(Cliente).where(Cliente.nome.in_(['Maxwell']))
+print('\nRecuperando cliente com nome Maxwell')
+for cliente in session.scalars(stmt_cliente):
+    print(cliente)
+
+stmt_conta = select(Conta)
+print('\nRecuperando contas')
+for conta in session.scalars(stmt_conta):
+    print(conta)
+
+stmt_join = select(Conta, Cliente.nome).join_from(Cliente, Conta)
+print('\nRecuperando join de tabelas')
+for result in session.scalars(stmt_join):
+    print(result)
+
+
+connection = engine.connect()
+results = connection.execute(stmt_join).fetchall()
+print('\nExecutando statement a partir da connection')
+for result in results:
+    print(result)
+
+session.close()
