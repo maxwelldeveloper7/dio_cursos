@@ -2,13 +2,11 @@
     API flask que retorna dados em formato JSON
 """
 
-# from flask_ngrok import run_with_ngrok
 from flask import Flask
 from flask import jsonify
-# import random as rk
 
-app = Flask(__name__) #the name of the application package
-# run_with_ngrok(app)
+
+app = Flask(__name__) 
 
 d = [
       {'number': 1, 'name': 'Mahesh', 'age': 25, 'country': 'India'},
@@ -18,16 +16,12 @@ d = [
       {'number': 5, 'name': 'Chris', 'age': 29, 'country': 'France'},
       ]
 
-@app.route("/") #code to assign HomePage URL in our app to function home.
+@app.route("/") 
 
 def home():
     '''
-    The entire line below must be written in a single line.
+        Retorno das informações em formato JSON
     '''
-    return "<marquee><h3>PARA CHECAR INPUT ADICIONE '/input' AO FINAL DA URL.</h3></marquee>"
-
-@app.route("/input")
-def input():
     return jsonify(d)
 
 app.run(debug=True)
