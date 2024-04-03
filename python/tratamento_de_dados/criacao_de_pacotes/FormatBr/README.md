@@ -1,27 +1,27 @@
-# package_name
+# FormatBr
 
 Description. 
-The package package_name is used to:
-	- 
-	-
+The package formatbr is used to:
+- This module offers tools for data formatting.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install package_name
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install formatbr
 
 ```bash
-pip install package_name
+pip install formatbr
 ```
 
 ## Usage
 
 ```python
-from package_name.module1_name import file1_name
-file1_name.my_function()
+from formatbr.data_types import text
+text.own_name("JOÃO DA SILVA")        
+# Return 'João da Silva'
 ```
 
 ## Author
-My_name
+Maxwell de Oliveira Chaves
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
