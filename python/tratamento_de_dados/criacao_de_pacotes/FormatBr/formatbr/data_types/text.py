@@ -30,3 +30,6 @@ def own_name(full_name: str) -> str:
         .replace(" Dos ", " dos ")
     )
     return name_formated
+
+if __name__ == '__main__':
+    pass
