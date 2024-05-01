@@ -27,6 +27,6 @@ def exclui_pessoa():
     pessoa.delete()
 
 if __name__ == '__main__':
-    #insere_pessoas()
-    exclui_pessoa()
+    insere_pessoas()
+    #exclui_pessoa()
     consulta()
