@@ -12,7 +12,7 @@ def ola_mundo(nome):
     print(f"Olá mundo {nome}!")
     return nome.upper()
 
-# resultado = ola_mundo("Maria")
-# print(resultado)
+resultado = ola_mundo("Maria")
+print(resultado)
 
 print(ola_mundo.__name__)
