@@ -18,3 +18,4 @@ def ola_mundo():
 
 ola_mundo()
 
+# OBS: Ao executar o código acima, o decorator é executado antes da função.
