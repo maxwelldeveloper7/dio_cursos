@@ -36,27 +36,45 @@ def inserir_muitos(conn, cur, dados):
     cur.executemany('INSERT INTO clientes (nome, email) VALUES (?, ?);', dados)
     conn.commit()
 
-dados = [
-    ("Ana Silva", "ana.silva@example.com"),
-    ("Carlos Pereira", "carlos.pereira@example.com"),
-    ("Maria Oliveira", "maria.oliveira@example.com"),
-    ("João Souza", "joao.souza@example.com"),
-    ("Luiza Fernandes", "luiza.fernandes@example.com"),
-    ("Pedro Lima", "pedro.lima@example.com"),
-    ("Carla Dias", "carla.dias@example.com"),
-    ("Lucas Mendes", "lucas.mendes@example.com"),
-    ("Juliana Costa", "juliana.costa@example.com"),
-    ("Marcos Alves", "marcos.alves@example.com"),
-    ("Fernanda Rocha", "fernanda.rocha@example.com"),
-    ("Roberto Gonçalves", "roberto.goncalves@example.com"),
-    ("Sofia Martins", "sofia.martins@example.com"),
-    ("Rafael Silva", "rafael.silva@example.com"),
-    ("Bianca Souza", "bianca.souza@example.com"),
-    ("Renato Alves", "renato.alves@example.com"),
-    ("Patrícia Ferreira", "patricia.ferreira@example.com"),
-    ("Ricardo Costa", "ricardo.costa@example.com"),
-    ("Larissa Oliveira", "larissa.oliveira@example.com"),
-    ("Gabriel Lima", "gabriel.lima@example.com")
-]
+def recuperar_cliente(cur, id):
+    cur.execute('SELECT * FROM clientes WHERE id = ?;', (id,))
+    return cur.fetchone()
 
-inserir_muitos(conexao, cursor, dados)
+def listar_clientes(cur):
+    cur.execute('SELECT * FROM clientes ORDER BY nome;')
+    return cur.fetchall()
+
+cliente = recuperar_cliente(cursor, 10)
+print(cliente)
+
+clientes = listar_clientes(cursor)
+print(clientes)
+
+for cliente in clientes:
+    print(cliente)
+# dados = [
+#     ("Ana Silva", "ana.silva@example.com"),
+#     ("Carlos Pereira", "carlos.pereira@example.com"),
+#     ("Maria Oliveira", "maria.oliveira@example.com"),
+#     ("João Souza", "joao.souza@example.com"),
+#     ("Luiza Fernandes", "luiza.fernandes@example.com"),
+#     ("Pedro Lima", "pedro.lima@example.com"),
+#     ("Carla Dias", "carla.dias@example.com"),
+#     ("Lucas Mendes", "lucas.mendes@example.com"),
+#     ("Juliana Costa", "juliana.costa@example.com"),
+#     ("Marcos Alves", "marcos.alves@example.com"),
+#     ("Fernanda Rocha", "fernanda.rocha@example.com"),
+#     ("Roberto Gonçalves", "roberto.goncalves@example.com"),
+#     ("Sofia Martins", "sofia.martins@example.com"),
+#     ("Rafael Silva", "rafael.silva@example.com"),
+#     ("Bianca Souza", "bianca.souza@example.com"),
+#     ("Renato Alves", "renato.alves@example.com"),
+#     ("Patrícia Ferreira", "patricia.ferreira@example.com"),
+#     ("Ricardo Costa", "ricardo.costa@example.com"),
+#     ("Larissa Oliveira", "larissa.oliveira@example.com"),
+#     ("Gabriel Lima", "gabriel.lima@example.com")
+# ]
+
+# inserir_muitos(conexao, cursor, dados)
+
+
