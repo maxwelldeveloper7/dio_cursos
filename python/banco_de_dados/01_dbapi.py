@@ -5,6 +5,7 @@ ROOT_PATH = Path(__file__).parent
 
 conexao = sqlite3.connect(ROOT_PATH / "meu_banco.db")
 cursor = conexao.cursor()
+cursor.row_factory =  sqlite3.Row
 
 def criar_tabela(conn, cur):
     """Cria a tabela clientes"""
@@ -36,6 +37,10 @@ def inserir_muitos(conn, cur, dados):
     cur.executemany('INSERT INTO clientes (nome, email) VALUES (?, ?);', dados)
     conn.commit()
 
+# def recuperar_cliente(cur, id):
+#     cur.execute('SELECT * FROM clientes WHERE id = ?;', (id,))
+#     return cur.fetchone()
+
 def recuperar_cliente(cur, id):
     cur.execute('SELECT * FROM clientes WHERE id = ?;', (id,))
     return cur.fetchone()
@@ -45,13 +50,13 @@ def listar_clientes(cur):
     return cur.fetchall()
 
 cliente = recuperar_cliente(cursor, 10)
-print(cliente)
+print(dict(cliente))
 
 clientes = listar_clientes(cursor)
 print(clientes)
 
 for cliente in clientes:
-    print(cliente)
+    print(dict(cliente))
 # dados = [
 #     ("Ana Silva", "ana.silva@example.com"),
 #     ("Carlos Pereira", "carlos.pereira@example.com"),
