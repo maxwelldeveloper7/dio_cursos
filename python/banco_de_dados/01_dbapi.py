@@ -17,9 +17,13 @@ def criar_tabela(conn, cur):
 
 def inserir_registro(conn, cur, nome, email):
     """Insere um registro na tabela clientes"""
-    data = (nome, email)
-    cur.execute('INSERT INTO clientes (nome, email) VALUES (?, ?);', data)
-    conn.commit()
+    try:
+        data = (nome, email)
+        cur.execute('INSERT INTO clientes (nome, email) VALUES (?, ?);', data)
+        conn.commit()
+    except  Exception as e:
+        print(f'Ops! um erro ocorreu! {e}')
+        conexao.rollback()
 
 def atualizar_registro(conn, cur, nome, email, id):
     """Atualiza um registro na tabela clientes"""
