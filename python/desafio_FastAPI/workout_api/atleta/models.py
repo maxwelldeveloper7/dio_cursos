@@ -1,8 +1,8 @@
 from datetime import datetime
-from sqlalchemy import DateTime, Integer
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
+from sqlalchemy import DateTime, Integer, String
 from workout_api.contrib.models import BaseModel
-from sqlalchemy import String
+from sqlalchemy import ForeignKey
 
 class AtletaModel(BaseModel):
     __tablename__ = 'atletas'
@@ -15,3 +15,6 @@ class AtletaModel(BaseModel):
     altura: Mapped[float] = mapped_column(Integer, nullable=False)
     sexo: Mapped[str] = mapped_column(String(1), nullable=False)
     created_at: Mapped[datetime] = mapped_column(DateTime, nullable=False)
+    categoria: Mapped['CategoriaModel'] = relationship(back_populates='atleta')
+    categoria_id: Mapped[int] = mapped_column(Integer, ForeignKey('categorias.pk_id'), nullable=False)
+    # TODO continuar de 8:12 - criação de entidades categoria e centro de treinamento
