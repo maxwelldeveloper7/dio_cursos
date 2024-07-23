@@ -19,15 +19,30 @@
 </head>
 
 <body>
-    <section class="content">
-        <h1>Pokedex</h1>
-        <ol id="pokemonList" class="pokemons">
-            
-        </ol>
-        <div class="pagination">
-            <button type="button" id="loadMoreButton">Load More</button>
-        </div>
-    </section>
+    <div id="pokemonDetail"></div>
+
+    <script>
+        window.onload = function() {
+            const pokemonData = JSON.parse(localStorage.getItem('currentPokemon'));
+            if(pokemonData) {
+                const detailContainer = document.getElementById('pokemonDetail');
+                const type = pokemonData.type;
+                const types = pokemonData.types.map(type => `<li class="type ${type}">${type}</li>`).join('');
+                detailContainer.innerHTML = `
+                    <div class="pokemon__detail ${type}">
+                        <h2>${pokemonData.name}</h2>
+                        <div class="detail">
+                            <ol class="types type">${types}</ol>
+                            <p class="number">#${pokemonData.number}</p>
+                        </div>
+                        <img src="${pokemonData.photo}" alt="${pokemonData.name}" />
+                    </div>
+                `;
+            } else {
+                document.getElementById('pokemonDetail').innerHTML = '<p>No Pokémon data found.</p>';
+            }
+        }
+    </script>
 
     <!-- Nosso JS -->
     <script src="./assets/js/pokemon-model.js"></script>

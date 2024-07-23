@@ -9,7 +9,7 @@ let offset = 0;
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pekemons = []) => {
         const newHtml = pekemons.map((pokemon) => `
-            <li class="pokemon ${pokemon.type}">
+            <li class="pokemon ${pokemon.type}" data-pokemon='${JSON.stringify(pokemon)}'>
                 <span class="number">#${pokemon.number}</span>
                 <span class="name">${pokemon.name}</span>
 
@@ -22,30 +22,22 @@ function loadPokemonItens(offset, limit) {
                 </div>
             </li>
         `).join('');
-        pokemonList.innerHTML += newHtml;
-        addPokemonClickEvent();
-    })
+        pokemonList.innerHTML += newHtml;        
+    }).then(() => {
+        addClickEventToPokemonItems();
+    });
 }
 
 
-function addPokemonClickEvent() {
-    const pokemonItems = document.getElementsByClassName('pokemon');
-    for (let i = 0; i < pokemonItems.length; i++) {
-        pokemonItems[i].addEventListener('click', function() {
-            const pokemonData = {
-                number: this.querySelector('.number').textContent,
-                name: this.querySelector('.name').textContent,
-                types: Array.from(this.querySelectorAll('.type')).map(type => type.textContent),
-                photo: this.querySelector('img').src
-            };
-
-            // Armazenar os dados no localStorage para acesso em detail.html
-            localStorage.setItem('currentPokemon', JSON.stringify(pokemonData));
-
-            // Redirecionar para a página de detalhes
+function addClickEventToPokemonItems() {
+    const pokemonItems = document.querySelectorAll('.pokemon');
+    pokemonItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const pokemonData = this.getAttribute('data-pokemon');
+            localStorage.setItem('currentPokemon', pokemonData);
             window.location.href = 'detail.html';
         });
-    }
+    });
 }
 
 loadPokemonItens(offset, limit);
