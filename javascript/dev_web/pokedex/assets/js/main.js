@@ -23,15 +23,27 @@ function loadPokemonItens(offset, limit) {
             </li>
         `).join('');
         pokemonList.innerHTML += newHtml;
-        addDetailClickEvent();
+        addPokemonClickEvent();
     })
 }
 
-function addDetailClickEvent() {
-    const details = document.getElementsByClassName('detail');
-    for (let i = 0; i < details.length; i++) {
-        details[i].addEventListener('click', () => {
-            console.log('Detail clicked:', details[i]);
+
+function addPokemonClickEvent() {
+    const pokemonItems = document.getElementsByClassName('pokemon');
+    for (let i = 0; i < pokemonItems.length; i++) {
+        pokemonItems[i].addEventListener('click', function() {
+            const pokemonData = {
+                number: this.querySelector('.number').textContent,
+                name: this.querySelector('.name').textContent,
+                types: Array.from(this.querySelectorAll('.type')).map(type => type.textContent),
+                photo: this.querySelector('img').src
+            };
+
+            // Armazenar os dados no localStorage para acesso em detail.html
+            localStorage.setItem('currentPokemon', JSON.stringify(pokemonData));
+
+            // Redirecionar para a página de detalhes
+            window.location.href = 'detail.html';
         });
     }
 }
