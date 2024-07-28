@@ -29,16 +29,16 @@
 <body>
     <main class="main">
         <header class="header">
-            <img class="photo" src="./assets/img/my-photo.jpeg" alt="Foto do Maxwell de Oliveir Chaves">
-            <h1 class="title">Olá,<br> eu sou Maxwell Chaves</h1>
+            <img class="photo" id="profile.photo" src="./assets/img/my-photo.jpeg" alt="Foto do Maxwell de Oliveira Chaves">
+            <h1 class="title">Olá,<br> eu sou <span id="profile.name">Carregando...</span></h1>
             <div class="information">
-                <p class="job">Desenvolvedor FullStack</p>
-                <p class="location">Nanuque - BR</p>
-                <p class="phone"><a href="tel: (33) 98811-7010">(33) 98811-7010</a></p>
-                <p class="email"><a href="mailto: maxwellchaves1844@gmail.com">maxwellchaves1844@gmail.com</a></p>
+                <p class="job" id="profile.job">Carregando...</p>
+                <p class="location" id="profile.location">Carregando...</p>
+                <p class="phone" id="profile.phone"><a href="tel: (33) 98811-7010">Carregando...</a></p>
+                <p class="email" id="profile.email"><a href="mailto: maxwellchaves1844@gmail.com">Carregando...</a></p>
             </div>
         </header>
-        <section class="acordeon open">
+        <section class="acordeon">
             <button class="trigger" type="button">
                 <h2>Skills</h2>
             </button>
@@ -69,25 +69,8 @@
                     </section>
                     <section class="personal">
                         <h3>Habilidades Pessoais</h3>
-                        <ul>
-                            <li>
-                                <p>Proatividade</p>
-                            </li>
-                            <li>
-                                <p>Liderança</p>
-                            </li>
-                            <li>
-                                <p>Trabalho em Equipe</p>
-                            </li>
-                            <li>
-                                <p>Foco em resultados</p>
-                            </li>
-                            <li>
-                                <p>Organização</p>
-                            </li>
-                            <li>
-                                <p>Comunicação</p>
-                            </li>
+                        <ul id="profile.skills.softSkills">
+                            <li></li>
                         </ul>
                     </section>
                 </div>
@@ -96,17 +79,6 @@
         <section class="acordeon">
             <button class="trigger" type="button">
                 <h2>Idiomas</h2>
-            </button>
-            <div class="content">
-                <ul class="languages">
-                    <li>Português</li>
-                    <li>Inglês Instrumental</li>
-                </ul>
-            </div>
-        </section>
-        <section class="acordeon open">
-            <button class="trigger" type="button">
-                <h2>Educação</h2>
             </button>
             <div class="content">
                 <ul class="languages">
@@ -219,6 +191,8 @@
     </main>
 
     <script src="./assets/js/acordeon.js"></script>
+    <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
