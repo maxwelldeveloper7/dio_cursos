@@ -1,0 +1,117 @@
+{
+  "name": "Maxwell Chaves",
+  "photo": "https://avatars.githubusercontent.com/u/37343503?s=96&v=4",
+  "job": "Desenvolvedor",
+  "location": "Nanuque - MG",
+  "phone": "(33) 98811-7010",
+  "email": "maxwellchaves1844@gmail.com",
+  "skills": {
+    "hardSkills": [
+      {
+        "name": "Java",
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/Java.png"
+      },
+      {
+        "name": "Python",
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/python.png"
+      },
+      {
+        "name": "HTML",
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/angular.png"
+      },
+      {
+        "name": "css",
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/react.png"
+      },
+      {
+        "name": "Java Script",
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/mongodb.png"
+      },
+      {
+        "name": "Postgresql",
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/postgresql.png"
+      }
+    ],
+    "softSkills": [
+      "Proatividade",
+      "Liderança",
+      "Trabalho em equipe",
+      "Foco em resultadois",
+      "Organização",
+      "Comunicação"
+    ]
+  },
+  "languages": [
+    "Português BR",
+    "Inglês (iniciante)"
+  ],
+  "portfolio": [
+    {
+      "name": "SISGVC - Sistema Gerenciador de Vendas Consignadas",
+      "url": "https://github.com/maxwelldeveloper7/sisgvc",
+      "github": true
+    },
+    {
+      "name": "Vacina-Covid19",
+      "url": "https://github.com/maxwelldeveloper7/Vacina-covid19",
+      "github": true
+    },
+    {
+      "name": "Cadastro Creche",
+      "url": "https://github.com/maxwelldeveloper7/cadastro-creches",
+      "github": true
+    },
+    {
+      "name": "Revome-Espacos",
+      "url": "https://github.com/maxwelldeveloper7/revome-espacos",
+      "github": true
+    },
+    {
+      "name": "Jogo - Resgate nas Estrelas",
+      "url": "https://github.com/maxwelldeveloper7/resgate_nas_estrelas",
+      "github": true
+    }
+  ],
+  "professionalExperience": [
+    {
+      "name": "Professor (Secretaria de Estado de Educação de Minas Gerais)",
+      "period": "2023 - até o momento",
+      "description": "Curso Técnico de Informática para Internet."
+    },
+    {
+      "name": "Instrutor de Informática (Prefeitura Municipal de Nanuque-MG)",
+      "period": "2013 - até o momento",
+      "description": "Inclusão digital em escolas de Ensino Fundamental."
+    },
+    {
+      "name": "Desenvolvedor Freelancer",
+      "period": "2012 - até o momento",
+      "description": "Desenvolvimento de Sistemas."
+    },
+    {
+      "name": "Instrutor de Qualificação Profissional (SENAI)",
+      "period": "Jan de 2015 - Abr de 2015",
+      "description": "Curso Operador de Computador (PRONATEC)."
+    },
+    {
+      "name": "Professor (Secretaria de Estado de Educação de Minas Gerais)",
+      "period": "2013 - 2015",
+      "description": "Curso Técnico de Informática (PRONATEC)"
+    },
+    {
+      "name": "Instrutor de Qualificação Profissional (SENAI)",
+      "period": "Set de 2013 - Dez de 2013",
+      "description": "Curso Operador de Computador (PRONATEC)"
+    },
+    {
+      "name": "Agente Censitário de Informática (IBGE)",
+      "period": "Mar de 2010 - Dez de 2010",
+      "description": "Prestar suporte técnico de informática aos postos de coleta, garantindo o início e a continuidade das atividades de coleta."
+    },
+    {
+      "name": "Assitente Administrativo (Prefeitura Municipal de Nanuque-MG)",
+      "period": "2001 - 2009",
+      "description": "Realizar manutenção na base de dados municipal de Sistemas Informatizados mantidos pelo DATASUS. Auxiliar em outras rotinas administrativas."
+    }
+  ]
+}
