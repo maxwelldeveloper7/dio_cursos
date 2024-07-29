@@ -14,12 +14,13 @@
     list-style: none;
 }
 
-.skills .tools ul li img {
+.skills .tools ul li img{
     max-width: 50px;
+    max-height: 50px;
     margin: 0 .5rem;
 }
 
-.skills .personal ul {
+.skills .personal ul{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
