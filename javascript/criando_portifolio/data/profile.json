@@ -9,27 +9,27 @@
     "hardSkills": [
       {
         "name": "Java",
-        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/java.png"
+        "logo": "https://raw.githubusercontent.com/maxwelldeveloper7/dio_cursos/209caeb5dfa6e5386330b778e9dc502db7f5f742/javascript/criando_portifolio/data/imgs/java.svg"
       },
       {
         "name": "Python",
-        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/python.png"
+        "logo": "https://raw.githubusercontent.com/maxwelldeveloper7/dio_cursos/209caeb5dfa6e5386330b778e9dc502db7f5f742/javascript/criando_portifolio/data/imgs/python.svg"
       },
       {
         "name": "HTML",
-        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/angular.png"
+        "logo": "https://raw.githubusercontent.com/maxwelldeveloper7/dio_cursos/209caeb5dfa6e5386330b778e9dc502db7f5f742/javascript/criando_portifolio/data/imgs/html.svg"
       },
       {
         "name": "css",
-        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/react.png"
+        "logo": "https://raw.githubusercontent.com/maxwelldeveloper7/dio_cursos/209caeb5dfa6e5386330b778e9dc502db7f5f742/javascript/criando_portifolio/data/imgs/css.svg"
       },
       {
         "name": "Java Script",
-        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/mongodb.png"
+        "logo": "https://raw.githubusercontent.com/maxwelldeveloper7/dio_cursos/209caeb5dfa6e5386330b778e9dc502db7f5f742/javascript/criando_portifolio/data/imgs/javascript.svg"
       },
       {
         "name": "Postgresql",
-        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/postgresql.png"
+        "logo": "https://raw.githubusercontent.com/maxwelldeveloper7/dio_cursos/209caeb5dfa6e5386330b778e9dc502db7f5f742/javascript/criando_portifolio/data/imgs/postgresql.svg"
       }
     ],
     "softSkills": [
