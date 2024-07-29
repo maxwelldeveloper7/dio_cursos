@@ -1,6 +1,6 @@
 # Criando Portfólio
 
-Este projeto é uma aplicação web desenvolvida em JavaScript que demonstra como criar um portfólio pessoal interativo.
+Este projeto é uma página web desenvolvida em JavaScript, HTML e CSS, que demonstra como criar um portfólio pessoal interativo.
 
 ## Tecnologias Utilizadas
 
