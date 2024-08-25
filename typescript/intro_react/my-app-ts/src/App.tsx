@@ -1,32 +1,26 @@
-import React from "react";
 import { Card } from "./components/Card";
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
+import { Layout } from "./components/Layout";
 
 function App() {
   return (
-    <React.Fragment>
-    <div>
-      <Header/>
-      Hello word
-      <Card 
+    <Layout>
+      Hello world
+      <Card
         id={1}
         paragraph="Typescript"
-        details="TS para frontend e backend"
+        details="Typescript para frontend e backend"
       />
-      <Card 
+      <Card
         id={2}
-        paragraph="HTML" 
-        details="HTML para frontend"
+        paragraph="HTML"
+        details="HTML para frontend e backend"
       />
-      <Card 
-        id={3}
-        paragraph="SQL" 
+      <Card
+        id={1}
+        paragraph="SQL"
         details="SQL para bancos de dados"
       />
-    </div>
-    <Footer/>
-    </React.Fragment>
+    </Layout>
   );
 }
 
