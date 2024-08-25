@@ -1,8 +1,15 @@
-export const Card = () => {
+interface ICard {
+    id: number,
+    paragraph: string,
+    details: string
+}
+
+export const Card = ({id, paragraph, details}: ICard) => {
     return (
-        <div className="card">
-            <h1>Card</h1>
-            <p>Parágrafo</p>
+        <div>
+            <h1>Card {id}</h1>
+            <p>{paragraph}</p>
+            <p>{details}</p>
         </div>
     )
 }
