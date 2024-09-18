@@ -7,7 +7,7 @@ function App() {
   return (
     <ChakraProvider>
         <Layout>
-          <Box>
+          <Box minHeight='100vh' backgroundColor='#9413dc' padding="25px">
             <Card /> 
           </Box>
         </Layout>

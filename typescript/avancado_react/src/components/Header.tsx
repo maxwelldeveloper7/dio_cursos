@@ -3,7 +3,7 @@ import dio from './dio.svg'
 
 export const Header = () => {
   return (
-    <Box as="header" bg="teal.500" py={4} px={8} shadow="md">
+    <Box as="header" bg="orange" py={4} px={8} shadow="md">
       <Flex align="center">
         <Image 
           src={dio} boxSize="70px"
