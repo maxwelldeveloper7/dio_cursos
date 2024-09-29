@@ -1,10 +1,20 @@
-import { Center, Input, Box, Heading } from "@chakra-ui/react";
+import { Center, Input, Box } from "@chakra-ui/react";
 import { login } from "../services/login";
 import { Botao } from "./Button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { api } from "../api";
 
 export const Card = () => {
   const [email, setEmail] = useState('')
+
+  useEffect(() => {
+    const getData = async () => {
+      const data = await api
+      console.log(data)
+    }
+
+    getData()
+  })
 
   const logar = () => {
     alert(email)
@@ -12,10 +22,8 @@ export const Card = () => {
   
   return (
     <Box backgroundColor="#FFFFFF" borderRadius="25px" padding="15px">
-      <Center>
-        <Heading as="h2" size="md">
-          Faça o login
-        </Heading>
+      <Center>        
+        <h1>Faça o login</h1>        
       </Center>
       <Input placeholder="email" value={email} onChange={(event) => setEmail(event.target.value)} margin="10px 0 10px 0" />
       <Input placeholder="password" margin="0 0 10px 0" />
