@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilha de CSS</title>
+</head>
+
+<style>
+    #pre-definidas {
+        color: red;
+    }
+
+    #current-color {
+        color: deeppink;
+        border: 2px solid currentColor;
+    }
+
+    #rgb {
+        background-color: rgb(255, 0, 0);
+        color: rgb(175, 199, 91)
+    }
+
+    #rgba {
+        background-color: rgba(255, 0, 0, 0.7);
+    }
+
+    #hex {
+        color: #ff8923;
+    }
+
+    #hex-transparencia {
+        color: #ff0000;
+        background-color: #ff892398;
+    }
+
+    #hsl {
+        color: hsl(120, 100%, 50%);
+    }
+
+    #hsla {
+        background-color: hsla(120, 50%, 50%, .5);
+    }
+</style>
+<body>
+    <h1>Cores</h1>
+    <p>Existem várias formas de definirmos cores utlizando o CSS. Elas são:</p>
+    <ul>
+        <li id="pre-definidas">Cores pré-definidas</li>
+        <li id="current-color">Palavra-chaves "currentcolor"</li>
+        <li id="hex">Hexadecimal</li>
+        <li id="hex-transparencia">Hexadecimal com transparência</li>
+        <li id="rgb">RGB</li>
+        <li id="rgba">RGBA</li>
+        <li id="hsl">HSL</li>
+        <li id="hsla">HSLA</li>
+    </ul>
+    <h3>HSL</h3>
+    <code>HSL (hue, saturation, ligthness)</code>
+    <ul>
+        <li>
+            <b>Hue (matriz):</b> é o grau da roda de cores de 0 a 360 graus!
+            <ul>
+                <li>0 ou 360 vermelho</li>
+                <li>120 verde</li>
+                <li>240 azul</li>
+            </ul>
+        </li>
+        <li>
+            <b>Saturation (saturação):</b> valor percentual.
+            <ul>
+                <li>0% um tom de cinza</li>
+                <li>100% cor total</li>
+            </ul>
+        </li>
+        <li>
+            <b>Ligthness (luminosidade):</b> luminosidade da cor.
+            <ul>
+                <li>0% preto</li>
+                <li>100% branco</li>
+            </ul>
+        </li>
+    </ul>
+
+</body>
+</html>
