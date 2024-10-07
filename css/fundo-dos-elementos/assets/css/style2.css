@@ -8,6 +8,6 @@ div {
     width: 300px;
     height: 300px;
     background-color: palevioletred;
-    background-image: url('../images/background-01.jpg'), url('../images/background-02.jpg');
+    background-image: url('../images/background-02.jpg');
     background-repeat: no-repeat;
 }
