@@ -7,7 +7,13 @@ div {
 .exemplo {
     width: 300px;
     height: 300px;
-    background-color: palevioletred;
     background-image: url('../images/background-02.jpg');
-    background-repeat: no-repeat;
+}
+
+#cover {
+    background-size: cover;
+}
+
+#contain {
+    background-size: contain;
 }
