@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {    
+    font-family: Roboto;
+}
+
+.exemplo {
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    border: 30px solid;
+    margin: 50px auto;
+}
+
+#exemplo-1 {
+    border-image-source: url('../images/dio-logo.png');
+    border-image-repeat: repeat;
+    border-image-slice: 200;
+    border-image-outset: 30px 10px 60px 100px;
+}
+
+#exemplo-2 {
+    border-image-source: linear-gradient(red, blue);
+    border-image-slice: 10;
+    border-image-outset: 50px;
+}
