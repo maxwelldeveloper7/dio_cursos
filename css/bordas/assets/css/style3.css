@@ -24,3 +24,14 @@
 #exemplo-2 {
     border-image-source: linear-gradient(red, blue);
 }
+
+#exemplo-3 {
+    border-image-source: url('../images/dio-logo.png');
+    border-image-repeat: repeat;
+    border-image-slice: 200 fill;
+}
+
+#exemplo-4 {
+    border-image-source: linear-gradient(red, blue);
+    border-image-slice: 10;
+}
