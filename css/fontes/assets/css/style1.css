@@ -1,0 +1,10 @@
+@import url("./global.css");
+
+* {
+    font-family: Roboto;
+}
+
+p {
+    font-weight: bold;
+    font-style: italic;
+}
