@@ -25,6 +25,15 @@ h1 {
     font-style: bold;
 }
 
+code {
+    background-color: chartreuse;
+}
+
+h1 code {
+    font-weight: normal;
+    font-style: normal;
+}
+
 li {
     font-family: Roboto;
     font-style: italic;
