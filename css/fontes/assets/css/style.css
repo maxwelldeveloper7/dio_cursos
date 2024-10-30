@@ -27,10 +27,11 @@ h1 {
 
 code {
     background-color: chartreuse;
+    font-family: monospace;
 }
 
 h1 code {
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
 }
 

@@ -1,0 +1,17 @@
+@import url('./global.css');
+
+* {
+    font-family: Roboto;
+}
+
+p {
+    margin-bottom: 30px;
+}
+
+code {
+    font-family: monospace;
+}
+
+#extra-condensed {
+    font-stretch: extra-condensed;
+}
