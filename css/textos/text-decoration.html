@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilha CSS</title>
+    <style>
+        h1 + p {
+            color: red;
+            text-decoration-line: overline underline;
+            text-decoration-style: wavy;
+            text-decoration-color: blue;
+            text-decoration-thickness: 2px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #line-through {
+            text-decoration: line-through;
+        }
+
+        #text-decoration-line {
+            text-decoration-line: overline underline line-through;
+        }
+
+        #text-decoration-style {
+            text-decoration-line: overline underline;
+            text-decoration-style: wavy;
+        }
+    </style>
+</head>
+<body>
+    <h1>Propriedade <code>text-decoration</code></h1>
+    <p>
+        Adicina ou remove linhas no nosso texto: sejam linhas em cima, no meio, ou embaixo.
+    </p>
+
+    <p>
+        É uma propriedade abreviada de:
+        <ul>
+            <li><code>text-decoration-line</code></li>
+            <li><code>text-decoration-style</code></li>
+            <li><code>text-decoration-color</code></li>
+            <li><code>text-decoration-thickness</code></li>
+        </ul>
+    </p>
+    <a href="#">Link de Exemplo</a>
+    <p id="text-decoration-line">text-decoration-line</p>
+    <p id="text-decoration-style">text-decoration-style</p>
+</body>
+</html>
