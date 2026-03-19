@@ -16,38 +16,48 @@
             margin-bottom: 10px;
         }
         table {
-            width: 50%;
+            width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
         }
+
         th, td {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
         }
+
+        .absolutas , .relativas {
+            display: flex;
+            flex-direction: column;
+            align-items: center;            
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
-<body>
+<body>    
     <h1>Unidades de Medida</h1>
-
-    <!-- Unidades Absolutas: integer, number, percentage, dimensions -->
-    <h2>Absolutas</h2>
+    <ul>
+        <li><strong>Integer:</strong> 10, 20, 30</li>
+        <li><strong>Number:</strong> 10.5, 20.75</li>
+        <li><strong>Percentage:</strong> 50%, 100%</li>
+        <li><strong>Dimensions:</strong> Valores numéricos com unidades de medidas atrelada</li>
         <ul>
-            <li>Integer: 10, 20, 30</li>
-            <li>Number: 10.5, 20.75</li>
-            <li>Percentage: 50%, 100%</li>
-            <li>Dimensions: Valores numéricos com unidades de medidas atrelada</li>
-            <ul>
-                <!-- length, angle, time, resolution -->
-                <li>Length: px; em; vw; in</li>
-                <li>Angle: deg; turn; rad; grad</li>
-                <li>Time: s; ms</li>
-                <li>Resolution: dpi; dpcm; dppx</li>
+            <!-- length, angle, time, resolution -->
+            <li>Length: px; em; vw; in</li>
+            <li>Angle: deg; turn; rad; grad</li>
+            <li>Time: s; ms</li>
+            <li>Resolution: dpi; dpcm; dppx</li>
             </ul>
         </ul>
     </ul>
-    
-    
+    <div class="absolutas">
+    <!-- Unidades Absolutas: integer, number, percentage, dimensions -->
+    <h2>Absolutas</h2>
+        
     <!-- tabela: unidade, nome -->
     <table>
         <tr>
@@ -83,6 +93,39 @@
             <td>px</td>
             <td>Pixel</td>
         </tr>
-    </table>        
+    </table>
+    </div>
+    
+    <div class="relativas">
+    <!-- Unidades Relativas: %, em, rem, vw, vh -->
+    <h2>Relativas</h2>
+        <table>
+        <tr>
+            <th>Unidade</th>
+            <th>Nome</th>
+        </tr>
+        <!-- %, em, rem, vw, vh -->
+        <tr>
+            <td>%</td>
+            <td>Porcentagem</td>
+        </tr>
+        <tr>
+            <td>em</td>
+            <td>Relativa ao elemento pai</td>
+        </tr>
+        <tr>
+            <td>rem</td>
+            <td>Relativa à raiz do documento</td>
+        </tr>
+        <tr>
+            <td>vw</td>
+            <td>Relativa à largura da viewport</td>
+        </tr>
+        <tr>
+            <td>vh</td>
+            <td>Relativa à altura da viewport</td>
+        </tr>
+        </table>
+    </div>
 </body>
 </html>
