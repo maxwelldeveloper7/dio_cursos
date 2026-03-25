@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <style>
+        body {
+            box-sizing: border-box;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: azure;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            align-items: stretch;
+            background-color: lightblue;
+
+        }
+
+        nav {
+            background-color: lightcoral;
+            width: 100%;
+
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav a {
+            text-decoration: none; /* remove sublinhado */
+            color: inherit; /* herda a cor do pai */
+        }
+
+        main {
+            background-color: lightgreen;
+            padding: 0 20px;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            background-color: lightgray;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <h1>Minha Empresa</h1>
+        <p>Bem-vindo ao nosso site! Aqui você encontrará informações sobre nossos produtos e serviços.</p>
+    </main>
+    <footer>
+        <p>&copy; 2026 Minha Empresa. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
