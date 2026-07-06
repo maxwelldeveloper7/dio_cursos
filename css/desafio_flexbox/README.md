@@ -1,6 +1,6 @@
 # 🎬 Desafio Flexbox - YouTube Clone
 
-Projeto de desafio da DIO Cursos que implementa um clone da interface do YouTube utilizando **HTML** e **CSS com Flexbox**, com a temática de **Stranger Things**.
+Projeto de desafio da DIO Cursos que implementa um clone da interface do YouTube utilizando **HTML** e **CSS com Flexbox**.
 
 ## 📋 Sobre o Projeto
 
@@ -10,7 +10,6 @@ Este é um desafio prático para consolidar conhecimentos de **CSS Flexbox** atr
 
 - Praticar o uso de **Flexbox** para layouts responsivos
 - Recriar elementos visuais da interface do YouTube
-- Integrar a temática de Stranger Things
 - Desenvolver habilidades de HTML semântico e CSS moderno
 
 ## 🛠️ Tecnologias Utilizadas
@@ -91,7 +90,6 @@ A interface recria o layout do YouTube com:
 - Menu de navegação responsivo
 - Seção de vídeo em destaque
 - Sidebar com recomendações
-- Design adaptado para a temática Stranger Things
 
 ## 🎓 Conceitos de Aprendizado
 
@@ -107,7 +105,6 @@ Este projeto trabalha com:
 - O arquivo CSS é nomeado `sttyle.css` (com typo intencional)
 - Utilize este projeto como base para aprofundar conhecimentos em Flexbox
 - Considere implementar media queries para melhor responsividade
-- Explore variações de cores para a temática dark/light do Stranger Things
 
 ## 🤝 Contribuições
 
