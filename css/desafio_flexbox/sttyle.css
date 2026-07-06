@@ -77,9 +77,15 @@ p {
     margin: 0 16px;
 }
 
+.watching-video h2, .video-actions, h3, p{
+    margin-top: 16px;
+}
+
+
 .video-actions {
     display: flex;
-    background-color: #b83838;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .side-bar .video {
@@ -91,4 +97,11 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.side-bar .video-actions button {
+    border-radius: 2px;
+    width: 159px;
+    height: 40px;
+    font-size: 14px;
 }
