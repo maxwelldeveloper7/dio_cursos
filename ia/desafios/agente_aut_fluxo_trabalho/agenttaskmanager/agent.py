@@ -59,7 +59,86 @@ def listar_tarefas(status: str = 'todas'):
     # Filtrar as tarefas por status
     if status == 'todas':
         listas_filtradas = listas
-        TO DO contunuar em 7:00 minutos
+    elif status == 'a fazer':
+        listas_filtradas = [l for l in listas if l.name.upper() in ['A FAZER', 'TO DO', 'TODO']]
+    elif status == 'em andamento':
+        listas_filtradas = [l for l in listas if l.name.upper() in ['EM ANDAMENTO', 'DOING']]
+    elif status == 'concluido':
+        listas_filtradas = [l for l in listas if l.name.upper() in ['CONCLUÍDO', 'CONCLUIDO', 'DONE']]
+    else:
+        listas_filtradas = listas
+
+    tarefas = []
+
+    for lista in listas_filtradas:
+        cards = lista.list_cards()
+        for card in cards:
+            tarefas.append({
+                'nome': card.name,
+                'descricao': card.desc,
+                'vencimento': card.due,
+                'status': lista.name,
+                'id': card.id
+            })
+
+    return tarefas
+
+
+def mudar_status_tarefa(nome_da_task: str, novo_status: str) -> str:
+    try:
+        client = TrelloClient(
+            api_key=API_KEY,
+            api_secret=API_SECRET,
+            token=TOKEN
+        )
+
+        boards = client.list_boards()
+        meu_board = [b for b in boards if b.name == 'DIO'][0]
+        listas = meu_board.list_lists()
+
+        # Mapear status para listas
+        status_map = {
+            "a fazer": "A FAZER",
+            "em andamento": "EM ANDAMENTO",
+            "concluido": "CONCLUÍDO"
+        }
+        
+        nome_lista_destino = status_map.get(novo_status.lower())
+
+        if not nome_lista_destino:
+            return f"❌ Status inválido. Use: 'a fazer', 'em andamento' ou 'concluido'"
+        
+        # Encontrar lista de destino
+        lista_destino = next(
+            (l for l in listas if l.name.upper() == nome_lista_destino.upper()), 
+            None
+        )
+
+        if not lista_destino:
+            return f"❌ Lista '{nome_lista_destino}' não encontrada no board"
+        
+        # Buscar card em todas as listas
+        card_encontrado = None
+        lista_origem = None
+
+        for lista in listas:
+            cards = lista.list_cards()
+            card_encontrado = next(
+                (c for c in cards if c.name.lower() == nome_da_task.lower()), 
+                None
+            )
+            if card_encontrado:
+                lista_origem = lista
+                break
+        
+        if not card_encontrado:
+            return f"❌ Card '{nome_da_task}' não encontrado"
+        
+        # Mover
+        card_encontrado.change_list(lista_destino.id)
+        return f"✅ '{nome_da_task}': {lista_origem.name} → {lista_destino.name}"
+    except Exception as e:
+        return f"❌ Erro: {str(e)}"
 
 
 root_agent = Agent(
@@ -81,5 +160,5 @@ root_agent = Agent(
         5. Mudar o status da tarefa (ex: de "A fazer" para "Em andamento" ou "Concluída").
         6. Gerar contexto temporal (data e hora atual) para organizar as tarefas do dia.
     """,
-    tools=[get_temporal_context, adicionar_tarefa]
+    tools=[get_temporal_context, adicionar_tarefa, listar_tarefas, mudar_status_tarefa]
 )
