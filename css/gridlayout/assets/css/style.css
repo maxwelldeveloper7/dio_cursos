@@ -1,0 +1,17 @@
+.container1 {
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: grid;
+}
+
+.container2 {
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: inline-grid;
+}
+
+.item {
+    background-color: palegreen;
+}
