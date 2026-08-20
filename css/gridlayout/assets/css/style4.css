@@ -1,0 +1,26 @@
+.container {
+    border: 2px solid;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 4fr repeat(2, 1fr);
+    grid-template-rows: 50px 100px 200px;
+}
+
+.item1 {
+    text-align: center;
+    background-color: orange;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.item2 {
+    text-align: center;
+    background-color: deepskyblue;
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    grid-column: 1 / 4;
+    /* grid-row-start: 3;
+    grid-row-end: 4; */
+    grid-row: 3 / 4;
+}

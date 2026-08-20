@@ -1,0 +1,19 @@
+.container {
+    border: 2px solid;
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+}
+
+.item {
+    text-align: center;
+    background-color: orange;
+}
+
+.selected {
+    background-color: deepskyblue;
+    /* grid-column: 3 / 4;
+    grid-row: 3 / 4; */
+    grid-area: 2/3/3/3;
+}

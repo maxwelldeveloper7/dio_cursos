@@ -6,7 +6,14 @@
 
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 1fr 1fr 1fr */
-    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+
+    /* grid-auto-rows: 2fr; altura das linhas automáticas */
+
+    grid-auto-columns: 2fr; /* largura das colunas automáticas */
+
+    /* grid-auto-flow: row; default: row, column, dense */
+    grid-auto-flow: column; /*default: row, column, dense */
 }
 
 .container2 {
