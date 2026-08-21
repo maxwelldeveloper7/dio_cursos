@@ -1,0 +1,46 @@
+body {
+    display: grid;
+    border: 3px solid;
+    height: 80vh;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+
+    gap: 15px;
+    justify-items: center;
+    align-items: center;
+}
+
+.item-01 {
+    background-color: palegoldenrod;
+}
+
+.item-02 {
+    background-color: paleturquoise;
+}
+
+.item-03 {
+    background-color: palegreen;
+}
+
+.item-04 {
+    background-color: palevioletred;
+}
+
+.item-05 {
+    background-color: lightseagreen;
+}
+
+.item-06 {
+    background-color: violet;
+}
+
+.item-07 {
+    background-color: paleturquoise;
+}
+
+.item-08 {
+    background-color: paleturquoise;
+}
+
+.item-09 {
+    background-color: paleturquoise;
+}
