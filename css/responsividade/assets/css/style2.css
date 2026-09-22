@@ -61,3 +61,29 @@ footer {
     padding: 2rem;
     text-align: center;
 }
+
+@media screen and (max-width: 690px){
+    .card {
+        color: lightblue;
+        background-color: black;
+    }
+    .details {
+        flex-direction: column;
+    }
+
+    .image-card {
+        flex-basis: 100px;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    header {
+        background-color: lightgreen;
+    }
+}
+
+@media screen and (pointer: coarse) {
+    header {
+        color: cornflowerblue;
+    }
+}
