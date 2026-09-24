@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10% 20%;
+    height: 559px;
+    background-image: url("../img/header.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header h1 {
+    width: 19.6rem;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 56px;
+    color: #ffffff;
+}
+
+header p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 8px 8px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 1.75rem;
+    height: 2.75rem;
+    
+}
+
+.btn-baixar {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.btn-navegador {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+section {
+    padding: 4rem 8rem;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+section .texto h2 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 2.5rem;
+    color: #23272A;
+}
+
+section .texto p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    color: #23272A;
+}
+
+.encontrar {
+    background-color: #F6F6F6;
+    flex-direction: row-reverse;
+}
+
+.conexao {
+    background-color: #F6F6F6;
+    text-align: center;
+}
+
+footer {
+    background-color: #23272A;
+    height: 8.375rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+footer img {
+    max-width: 14.375rem;
+}
+
+
+@media screen and (max-width: 428px) {
+    body {
+        max-width: 428px;
+    }
+
+    header {
+        height: 505px;
+        padding: 15% 5%;
+        align-items: start;
+    }
+
+    header h1 {
+        width: 17.8rem;
+        font-size: 32px;
+        text-align: left;
+    }
+
+    header p {
+        text-align: left;
+    }
+
+    header nav ul{
+        flex-direction: column;
+        gap: 16px 0;
+    }
+
+    header nav ul li a{        
+        width: 100%;
+        text-align: center;
+        margin: auto;
+    }
+
+    section {
+        flex-direction: column;
+        padding: 1rem 2rem;
+    }
+
+    section .texto h2 {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    section .texto p {
+        font-size: 1.125rem;
+        text-align: left;
+    }
+
+    section img {
+        max-width: 100%;
+    }
+
+    .encontrar {
+        flex-direction: column;
+    }
+
+    footer img {
+        max-width: 10.125rem;
+    }
+}
