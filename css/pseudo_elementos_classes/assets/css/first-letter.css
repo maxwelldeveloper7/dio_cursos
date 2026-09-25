@@ -1,0 +1,19 @@
+code {
+    background-color: lightgrey;
+}
+
+p::first-letter {
+    color: red;
+    background-color: lightblue;
+    margin-right: 5px;
+    border: 1px solid black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+
+/* se não especificar o elemento ele aplica a todos da página html */
+::first-letter {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: blue;
+    margin-right: 3px;
+}
