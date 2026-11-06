@@ -1,0 +1,14 @@
+code {
+    background-color: lightgray;
+}
+
+summary::marker {
+    content: "☛ ";
+    color: red;
+    white-space: 10px;
+}
+
+li::marker {
+    color: blueviolet;
+    content: "✡ ";
+}
