@@ -1,0 +1,9 @@
+code {
+    background-color: lightgray;
+}
+
+.exemplo::selection {
+    background-color: aquamarine;
+    color: blue;
+    text-decoration: line-through;
+}
