@@ -1,0 +1,11 @@
+code {
+    background-color: lightgrey;
+}
+
+input::file-selector-button {
+    border: 2px solid darkblue;
+    background-color: #6c5ce7;
+    color: white;
+    padding: 12px;
+    border-radius: 4px;
+}
