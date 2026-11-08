@@ -1,0 +1,25 @@
+button {
+    background-color: palevioletred;
+    border: none;
+    padding: 8px 14px;
+    color: white;
+}
+
+button:hover {
+    background-color: palegreen;
+    color: darkgreen;
+    border: darkgreen 1px solid;
+    cursor: pointer;
+}
+
+.container {
+    width: 100px;
+    height: 100px;
+    background-color: palegoldenrod;
+    margin-top: 30px;
+}
+
+.container:hover {
+    background: url('https://picsum.photos/100/100') no-repeat;
+    background-size: cover;
+}
