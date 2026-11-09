@@ -1,0 +1,25 @@
+.botao {
+    background-color: palevioletred;
+    border: none;
+    padding: 8px 14px;
+    color: white;
+}
+
+.botao:hover {
+    background-color: palegreen;
+    color: darkgreen;
+}
+
+.botao:active {
+    background-color: purple;
+    color: white;
+}
+
+a:active {
+    background-color: pink;
+    color: black;
+}
+
+h1:active {
+    background-color: greenyellow;
+}
