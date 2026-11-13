@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/required.css">
+    <title>Pseudo-classes</title>
+</head>
+<body>
+    <h1>Pseudo-classes</h1>
+    <div>
+        <input name="required" type="checkbox">
+        <label for="required">:required</label>
+    </div>
+    <div>
+        <input name="optional" type="checkbox">
+        <label for="optional">:optional</label>
+    </div>
+    
+    <hr>
+    <form>
+        <h3>Faça sua compra:</h3>
+        <label for="email" required>Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="codigo-produto">Código do Produto:</label>
+        <input type="number" type="number" id="codigo-produto" name="codigo-produto" min="1000" required>
+        
+
+        <label for="cupom">Cupon de Desconto:</label>
+        <input
+            type="text" id="cupom" name="cupom"
+            pattern="[a-z]+"
+            placeholder="Apenas letras minúsculas"
+        >
+        
+
+        <label for="data-nascimento">Data de Nascimento</label>
+        <input type="date" id="data-nascimento" name="data-nascimento" min="1966-01-01" max="2026-12-31" required>
+        
+
+        <label for="quantidade">Quantidade</label>
+        <input type="number" id="quantidade" name="amount" min="3" max="10" value="3">
+        
+
+        <label for=""">
+            <input type="checkbox" required>
+            <span>Li e aceito os termos de uso</span>
+        </label>
+
+        <button type="submit">Comprar</button>
+
+    </form>
+</body>
+</html>
