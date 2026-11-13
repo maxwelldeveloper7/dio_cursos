@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/valid.css">
+    <title>Pseudo-classes</title>
+</head>
+<body>
+    <h1>Pseudo-classes</h1>
+    <div>
+        <input name="invalid" type="checkbox">
+        <label for="invalid">:invalid</label>
+    </div>
+    <div>
+        <input name="valid" type="checkbox">
+        <label for="valid">:valid</label>
+    </div>
+    <div>
+        <input name="in-range" type="checkbox">
+        <label for="in-range">:in-range</label>
+    </div>
+    <div>
+        <input name="out-of-range" type="checkbox">
+        <label for="out-of-range">out-of-range</label>
+    </div>
+    <hr>
+    <form>
+        <h3>Faça sua compra:</h3>
+        <label for="email" required>Email:</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error">Email inválido</span>
+
+        <label for="codigo-produto">Código do Produto:</label>
+        <input type="number" type="number" id="codigo-produto" name="codigo-produto" min="1000" required>
+        <span class="error">Código inválido.</span>
+
+        <label for="cupom">Cupon de Desconto:</label>
+        <input
+            type="text" id="cupom" name="cupom"
+            pattern="[a-z]+"
+            placeholder="Apenas letras minúsculas"
+        >
+        <span class="error">Cupom inválido.</span>
+
+        <label for="data-nascimento">Data de Nascimento</label>
+        <input type="date" id="data-nascimento" name="data-nascimento" min="1966-01-01" max="2026-12-31">
+        <span class="error">Data inválida.</span>
+
+        <label for="quantidade">Quantidade</label>
+        <input type="number" id="quantidade" name="amount" min="3" max="10">
+        <span class="error">Quantidade inválida.</span>
+
+        <label for=""">
+            <input type="checkbox" required>
+            <span>Li e aceito os termos de uso</span>
+        </label>
+
+        <button type="submit">Comprar</button>
+
+    </form>
+</body>
+</html>
