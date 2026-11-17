@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+}
+
+.post :is(h2, li, .red){
+    color: blue;
+}
+
+section p,
+article p, 
+aside p,
+nav p {
+    background-color: red;
+    font-weight: bold;
+}
+
+:where(section, article, aside, nav) p {
+    background-color: pink;
+    font-weight: bold;
+}
