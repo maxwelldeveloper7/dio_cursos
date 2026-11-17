@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+}
+
+.post p:not(.irrlevante){
+    color: red;
+}
+
+li:not(:first-child, :last-child) {
+    font-weight: bold;
+}
+
+img:not([alt]){
+    border: 3px solid red;
+}
